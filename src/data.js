@@ -1,9 +1,15 @@
+// Files in public/ are served under the site's folder (/john-makokha-cv/),
+// so paths are built from BASE_URL instead of starting with "/".
+const asset = path => import.meta.env.BASE_URL + path;
+
 export const profile = {
   name: "JOHN MAKOKHA",
+  title: "Electrical & Electronic Engineer",
   phone: "+254 741 924 396",
   email: "engineermakokha7@gmail.com",
-  photo: "/profile.jpg",       // personal photo
-  cv: "/John_Makokha_CV.pdf"   // CV file
+  photo: asset("profile.jpg"),
+  cv: asset("John_Makokha_CV.pdf"),      // PDF made from the Word CV
+  cvWord: asset("John_Makokha_CV.docx")  // the editable Word version
 };
 
 export const summary =
@@ -14,13 +20,13 @@ export const education = [
     school: "Technical University of Mombasa",
     degree: "Bachelor of Technology in Medical Engineering",
     location: "Mombasa, Kenya",
-    logo: "/logos/tum.png"
+    logo: asset("logos/tum.png")
   },
   {
     school: "Matunda S.A Secondary School",
     degree: "Kenya Certificate of Secondary Education (KCSE)",
     location: "Kakamega, Kenya",
-    logo: "/logos/matunda.png"
+    logo: asset("logos/matunda.png")
   }
 ];
 
@@ -44,7 +50,7 @@ export const work = [
       "Installed and serviced automatic alarms, fire alarm systems, electric fences, CCTV and access control",
       "Fault diagnosis and DVR upgrades, client training"
     ],
-    logo: "/logos/texas-alarms.png"
+    logo: asset("logos/texas-alarms.png")
   },
   {
     company: "Kenya Power and Lighting Co. Ltd (KPLC)",
@@ -54,7 +60,7 @@ export const work = [
       "Installed and read SME and Smart meters, inspections and accuracy testing",
       "Anti-tampering measures and troubleshooting"
     ],
-    logo: "/logos/kplc.png"
+    logo: asset("logos/kplc.png")
   },
   {
     company: "Genergy Electrical Ltd",
@@ -63,21 +69,21 @@ export const work = [
     bullets: [
       "Electrical installations; motor control; HVAC servicing; lamp repairs"
     ],
-    logo: "/logos/genergy.png"
+    logo: asset("logos/genergy.png")
   },
   {
     company: "BOCOM Fibre Ltd",
     role: "Fiber Optic Technician Assistant",
     period: "May – Dec 2020",
     bullets: ["Ducted and installed network cables; assisted in fiber testing"],
-    logo: "/logos/bocom.png"
+    logo: asset("logos/bocom.png")
   },
   {
     company: "County Government of Mombasa",
     role: "Electrical Engineer Intern",
     period: "May – Jul 2019",
     bullets: ["Diagnosed street lighting faults; installed wiring systems"],
-    logo: "/logos/mombasa-county.png"
+    logo: asset("logos/mombasa-county.png")
   }
 ];
 
