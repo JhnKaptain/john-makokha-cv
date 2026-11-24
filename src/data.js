@@ -56,7 +56,7 @@ export const work = [
       "Repaired, monitored and maintained lighting systems",
       "Kept inventories and maintenance logs, and supported office work"
     ],
-    logo: null
+    logo: asset("logos/gdc.png")
   },
   {
     company: "Texas Alarms (K) Ltd",
