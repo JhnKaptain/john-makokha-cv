@@ -3,9 +3,13 @@ import { profile, summary, education, skills, work, referees } from "./data";
 import "./styles.css";
 
 function Logo({ src, alt }) {
+  // No picture yet: show the initials (e.g. "GDC" from "... (GDC)").
+  const initials = (/\(([A-Z]{2,5})\)/.exec(alt) || [])[1] ||
+    alt.split(/\s+/).filter(w => /^[A-Z]/.test(w)).slice(0, 3).map(w => w[0]).join("");
   return (
     <div className="logo-wrap" title={alt}>
-      <img src={src} alt={alt} className="logo-img" loading="lazy" />
+      {src ? <img src={src} alt={alt} className="logo-img" loading="lazy" />
+        : <span className="logo-initials">{initials}</span>}
     </div>
   );
 }

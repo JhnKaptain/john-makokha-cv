@@ -31,6 +31,8 @@ export const education = [
 ];
 
 export const skills = [
+  "Hydraulic systems: rotating head, BOP controls, TDS pumps, power & casing tongs, winches",
+  "Generator sets, industrial compressors, mud pumps and mud tank pumps",
   "Electrical installations (residential, commercial, industrial)",
   "Motor control (D.O.L, Star-Delta, Reverse starters)",
   "Power metering: postpaid, prepaid, SME, smart meters",
@@ -42,6 +44,20 @@ export const skills = [
 ];
 
 export const work = [
+  {
+    // Brief for now; to be expanded from the GDC work report.
+    company: "Geothermal Development Company (GDC)",
+    role: "Rig Equipment Maintenance",
+    period: "2026",
+    bullets: [
+      "Operated, repaired and maintained rig hydraulic systems: rotating head, BOP control systems, top drive (TDS) hydraulic pumps, power and casing tongs, and winches",
+      "Ran, repaired and maintained generator sets and industrial compressor systems",
+      "Repaired and maintained mud pumps and mud tank pumps",
+      "Repaired, monitored and maintained lighting systems",
+      "Kept inventories and maintenance logs, and supported office work"
+    ],
+    logo: null
+  },
   {
     company: "Texas Alarms (K) Ltd",
     role: "Electrical Systems Technician",
