@@ -5,14 +5,14 @@ import "./styles.css";
 function Logo({ src, alt }) {
   return (
     <div className="logo-wrap" title={alt}>
-      <img src={src} alt={alt} className="logo-img" />
+      <img src={src} alt={alt} className="logo-img" loading="lazy" />
     </div>
   );
 }
 
-function Section({ title, children }) {
+function Section({ id, title, children }) {
   return (
-    <section className="section">
+    <section className="section" id={id}>
       <h3 className="section-title">{title}</h3>
       <div>{children}</div>
     </section>
@@ -34,13 +34,13 @@ export default function App() {
         >
           ☰
         </button>
-        <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+        <div className={`nav-links ${menuOpen ? "show" : ""}`} onClick={() => setMenuOpen(false)}>
           <a href="#summary">Summary</a>
           <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#work">Work</a>
           <a href="#referees">Referees</a>
-          <a href={profile.cv} download>
+          <a href={profile.cv} download="John_Makokha_CV.pdf">
             Download CV
           </a>
         </div>
@@ -50,6 +50,7 @@ export default function App() {
         <aside className="sidebar">
           <img className="profile-photo" src={profile.photo} alt={profile.name} />
           <h1 className="name">{profile.name}</h1>
+          <p className="title">{profile.title}</p>
           <p className="tagline">
             {summary.split(".").slice(0, 2).join(".") + "."}
           </p>
@@ -64,8 +65,11 @@ export default function App() {
           </div>
 
           <div className="cta">
-            <a className="btn primary" href={profile.cv} download>
+            <a className="btn primary" href={profile.cv} download="John_Makokha_CV.pdf">
               Download CV (PDF)
+            </a>
+            <a className="btn-link" href={profile.cvWord} download="John_Makokha_CV.docx">
+              or Word version
             </a>
           </div>
         </aside>

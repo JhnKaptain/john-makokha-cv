@@ -1,12 +1,26 @@
-# React + Vite
+# John Makokha — CV website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: **https://jhnkaptain.github.io/john-makokha-cv/**
 
-Currently, two official plugins are available:
+A one-page CV (React + Vite) with a **Download CV (PDF)** button and a Word version.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Updating the CV
 
-## Expanding the ESLint configuration
+- **Text on the page** (summary, education, skills, work, referees): edit `src/data.js`.
+- **The downloadable CV**: replace both files in `public/`:
+  - `John_Makokha_CV.docx`, the Word version;
+  - `John_Makokha_CV.pdf`, exported from that Word file (File → Save As → PDF). Keep these exact names.
+- **Photo**: replace `public/profile.jpg` with a real JPEG photo (square works best, at least 400×400).
+- **Company / school pictures**: `public/logos/`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Publishing
+
+Merging into `main` publishes the site automatically (GitHub Actions → "Publish CV site"),
+usually within 2 minutes. To publish by hand instead: `npm ci && npm run deploy`.
+
+## Running it on a computer
+
+```bash
+npm ci
+npm run dev
+```
