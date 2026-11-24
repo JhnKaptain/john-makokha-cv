@@ -132,7 +132,9 @@ export default function App() {
                 <div key={i} className="ref">
                   <div className="ref-name">{r.name}</div>
                   <div className="ref-role">{r.role}</div>
-                  <div className="ref-phone">{r.phone}</div>
+                  {r.phone && (
+                    <a className="ref-phone" href={`tel:${r.phone}`}>{r.phone}</a>
+                  )}
                 </div>
               ))}
             </div>
