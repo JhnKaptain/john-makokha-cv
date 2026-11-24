@@ -18,7 +18,7 @@ export const summary =
 export const education = [
   {
     school: "Technical University of Mombasa",
-    degree: "Bachelor of Technology in Medical Engineering",
+    degree: "Bachelor of Science in Electrical and Electronic Engineering",
     location: "Mombasa, Kenya",
     logo: asset("logos/tum.png")
   },
@@ -105,14 +105,19 @@ export const work = [
 
 export const referees = [
   {
-    name: "Brian Okida",
-    role: "Supervisor BOCOM Fibre Limited",
-    phone: "0799695113"
+    name: "Eric Rop",
+    role: "Electrician, Geothermal Development Company (GDC)",
+    phone: "0722978552"
   },
   {
-    name: "Richard Tande",
-    role: "Genergy Electrical Ltd",
-    phone: "0714570616"
+    name: "Diana Magodawa",
+    role: "Engineer, Equipment Maintenance, Geothermal Development Company (GDC)",
+    phone: "0700719419"
+  },
+  {
+    name: "Thomas Waweu",
+    role: "Texas Alarms (K) Ltd",
+    phone: "0757424808"
   },
   {
     name: "John Mboko",
@@ -120,8 +125,13 @@ export const referees = [
     phone: "0722790204"
   },
   {
-    name: "Thomas Waweu",
-    role: "Texas Alarms (K) Ltd",
-    phone: "0757424808"
+    name: "Richard Tande",
+    role: "Genergy Electrical Ltd",
+    phone: "0714570616"
+  },
+  {
+    name: "Brian Okida",
+    role: "Supervisor BOCOM Fibre Limited",
+    phone: "0799695113"
   }
 ];
